@@ -12,4 +12,9 @@ public class GenerationKeyActivationActivity extends AppCompatActivity {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_generation_key_activation);
    }
+
+   public void metodoHome()
+   {
+
+   }
 }
