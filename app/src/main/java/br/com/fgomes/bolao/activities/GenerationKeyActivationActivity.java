@@ -16,5 +16,6 @@ public class GenerationKeyActivationActivity extends AppCompatActivity {
    private void metodoGit()
    {
       int teste = 0;
+      int teste1 = 1;
    }
 }
