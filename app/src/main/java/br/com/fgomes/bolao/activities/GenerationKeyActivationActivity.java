@@ -17,5 +17,6 @@ public class GenerationKeyActivationActivity extends AppCompatActivity {
    {
       int teste = 0;
       int teste1 = 1;
+      int teste3 = 3;
    }
 }
