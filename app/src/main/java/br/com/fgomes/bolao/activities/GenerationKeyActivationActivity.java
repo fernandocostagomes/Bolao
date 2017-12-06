@@ -2,8 +2,8 @@ package br.com.fgomes.bolao.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import br.com.fgomes.bolao.R;
+
 
 public class GenerationKeyActivationActivity extends AppCompatActivity {
 
