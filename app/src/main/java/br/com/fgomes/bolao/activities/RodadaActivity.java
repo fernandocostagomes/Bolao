@@ -1,5 +1,6 @@
 package br.com.fgomes.bolao.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,9 +15,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import br.com.fgomes.bolao.*;
+import br.com.fgomes.bolao.utils.ClientConsts;
+import br.com.fgomes.bolao.utils.DbConst;
+import br.com.fgomes.bolao.utils.DbHelper;
 
 public class RodadaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+   public DbHelper mDbHelper = new DbHelper(getApplicationContext());
+
+   private void verifyActivation()
+   {
+      String verifyActivation = mDbHelper.selectParameter(DbConst.DbParameterIdValues.PARAM_STATUS_ACTIVATION_ID);
+      if(verifyActivation.equals(ClientConsts.StatusActivation.DESACTIVED))
+      {
+         startActivity(new Intent(getApplicationContext(), ActivationActivity.class));
+      }
+   }
 
    @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +57,8 @@ public class RodadaActivity extends AppCompatActivity
 
       NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
       navigationView.setNavigationItemSelectedListener(this);
+
+      verifyActivation();
    }
 
    @Override

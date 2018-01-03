@@ -5,4 +5,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configurações</string>
+    <string name="title_activity_activation">Ativação</string>
+
+    <!-- Strings related to activation -->
+    <string name="prompt_name">Nome</string>
+    <string name="prompt_key">Key</string>
+    <string name="action_activate">Ativar</string>
+    <string name="error_invalid_name">Este nome é inválido</string>
+    <string name="error_invalid_key">Esta chave é inválida</string>
+    <string name="error_field_required">O campo é necessário</string>
+
 </resources>
